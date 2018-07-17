@@ -1,7 +1,7 @@
 package akaminski;
 
 public class Word_class {
-
+    //Przeszukwianie tabeli
     public void szukaj(int Wybor, String[] Tabela, String Word){
 
         switch (Wybor) {
@@ -33,4 +33,13 @@ public class Word_class {
 
     }
 
+    //Silnia uzywając rekurencji
+    public long fact (long n){
+
+        if (n <= 1)
+            return 1; //if 0 || 1
+        else
+            return n * fact(n -1);
+
+    }
 }
