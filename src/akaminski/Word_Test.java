@@ -1,6 +1,6 @@
 package akaminski;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Word_Test {
 
@@ -10,17 +10,34 @@ public class Word_Test {
         String litera;
         String slowo;
         Scanner odczyt = new Scanner(System.in);
-        String newLine = System.getProperty("line.separator");
         String[] Rzeczy = {"kalkulator", "drabina", "szafka", "linijka", "telefon"};
+        List<String> list1 = new LinkedList<>();
+        String[] Rzeczy2 = {"rower", "monitor", "myszka", "kalkulator","linijka"};
+        List<String> list2 = new LinkedList<>();
 
-        System.out.println("Co chcesz zrobić? ");
-        System.out.println("1.Zaczyna," + newLine + "2.Kończy," + newLine + "3.Zawiera ");
-        Wybor = Integer.parseInt(odczyt.nextLine());
-        System.out.println("Podaj litere: ");
-        litera = odczyt.nextLine();
+        Word_class word = new Word_class();
+       // System.out.println(list1);
+       // word.Dodaj(Rzeczy,list1);
+       // word.Dodaj(Rzeczy2,list2);
+       // word.DodajList(list1,list2);
+       // System.out.println(list1);
+        //word.Wyswietl(list1);
+       //word.Edytuj(list1,list2);
+        //System.out.println();
+       // word.Reverse(list1);
+       // word.Wyswietl(list1);
+       // System.out.println();
+        //word.Usun(list1);
+        word.Dodaj(Rzeczy,list1);
+        word.Dodaj(Rzeczy2,list2);
+        word.Con(list1,Rzeczy);
+        word.Con(list2,Rzeczy2);
+        word.Wyswietl(list1);
+       System.out.println();
+        word.Wyswietl(list2);
+        System.out.println();
+        word.check(list1,list2);
 
-        Word_class Word = new Word_class();
-        Word.szukaj(Wybor,Rzeczy,litera);
 
     }
 
